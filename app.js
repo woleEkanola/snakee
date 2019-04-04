@@ -85,7 +85,7 @@ function drawLine(startX, startY, toX, toY,){
 c.beginPath()
 c.moveTo(startX, startY)
 c.lineTo(toX, toY)
-c.strokeStyle = '#000'
+c.strokeStyle = 'rgba(0,0,0,0)'
 c.stroke()
 
 c.closePath()
