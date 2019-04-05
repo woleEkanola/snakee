@@ -111,18 +111,30 @@ y += pixel
 }
 
 
-function drawBox(  color){
+function drawBox(color){
+  let body = new Image();
+  body.src = './img/snakeBody.png';
+ let head =  new Image()
+ head.src = './img/snakeHead.png'
+//   base_image.onload = function(){
+//     context.drawImage(base_image, 0, 0);
+//   }
 
 let cc= snake.length
 
 c.strokeStyle = '#ccc'
 for(let i =0; i< cc; i++){
 c.fillStyle = color
+let img
 if (i==cc-1){
     c.fillStyle = 'green';
+    img = head
+}else{
+img = body
 }
-c.fillRect(pixel*snake[i].x, pixel*snake[i].y, pixel, pixel)
-c.stroke()
+c.drawImage(img, pixel*snake[i].x, pixel*snake[i].y, pixel, pixel);
+// c.fillRect(pixel*snake[i].x, pixel*snake[i].y, pixel, pixel)
+// c.stroke()
 }
 
 
