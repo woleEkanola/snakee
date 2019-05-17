@@ -109,13 +109,13 @@ y += pixel
     }
 
 }
-
+let body = new Image();
+body.src = './img/snakeBody.png';
+let head =  new Image()
+head.src = './img/snakeHeadrt.png'
 
 function drawBox(color){
-  let body = new Image();
-  body.src = './img/snakeBody.png';
- let head =  new Image()
- head.src = './img/snakeHead.png'
+
 //   base_image.onload = function(){
 //     context.drawImage(base_image, 0, 0);
 //   }
@@ -264,18 +264,28 @@ function left(){
     
      axis = 'x'
               d = -1
+              head.src = './img/snakeHead.png'
+
+              
 }
 function right(){
  axis = 'x'
                 d = 1
+                console.log('hdggdg',c)
+                head.src = './img/snakeHeadrt.png'
+
 }
 function up(){
       axis = 'y'
               f = -1
+              head.src = './img/snakeHeadup.png'
+
 }
 function down(){
      axis = 'y'
               f = 1
+              head.src = './img/snakeHeaddw.png'
+
 }
             function test(d){
 let o = `${d}()`
